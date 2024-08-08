@@ -1,0 +1,92 @@
+/* App.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.App {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Form Heading */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Labels */
+label {
+  font-size: 1em;
+  color: #555;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Form Inputs */
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Prediction Result Styling */
+.result {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.result.success {
+  color: #4CAF50;
+}
+
+.result.fail {
+  color: #f44336;
+}
