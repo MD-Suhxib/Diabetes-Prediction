@@ -1,14 +1,30 @@
-/* src/NavBar.css */
+/* Ensure that the body has no margin or padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
 .navbar {
     background-color: #4CAF50; /* Background color for the navbar */
     color: white; /* Text color */
-    padding: 10px 0; /* Padding for the navbar */
+    padding: 10px 20px; /* Padding for the navbar */
     text-align: center; /* Center-align text */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align the navbar to the top of the viewport */
+    left: 50%; /* Align the navbar horizontally to the center */
+    transform: translateX(-50%); /* Offset by half of its own width to perfectly center */
+    z-index: 1000; /* Ensure the navbar is on top of other elements */
+    width: auto; /* Allow the width to be determined by content */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content */
 }
 
+/* Navigation styling */
 .nav {
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center the nav items */
+    flex-wrap: wrap; /* Allow wrapping of items on small screens */
 }
 
 .nav-list {
@@ -16,6 +32,7 @@
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     display: flex; /* Display items in a row */
+    flex-wrap: wrap; /* Wrap items on small screens */
 }
 
 .nav-item {
@@ -31,4 +48,38 @@
 
 .nav-link:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on smaller screens */
+        padding: 10px; /* Reduce padding */
+        width: 100%; /* Full width on small screens */
+        left: 0; /* Align to the left */
+        transform: none; /* No need to translate */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Increase space between items vertically */
+    }
+
+    .nav-link {
+        font-size: 1em; /* Reduce font size slightly for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px; /* Further reduce padding */
+    }
+
+    .nav-link {
+        font-size: 0.9em; /* Further reduce font size */
+    }
 }

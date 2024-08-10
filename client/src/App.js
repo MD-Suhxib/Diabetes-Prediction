@@ -1,9 +1,10 @@
 // src/App.js
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './Components/Home' 
+import Home from './Components/home'
 import Diabetes from './Components/Diabetes'; 
 import Navbar from './Components/Navbar'; 
+import About from './Components/About';
 import './Navbar.css';
 import './App.css';
 
@@ -11,20 +12,24 @@ function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Home/>
+            element: <><Navbar/><Home/></>
         },
         {
             path : "/Dia",
-            element: <Diabetes/>
+            element: <><Navbar/><Diabetes/></>
+        },
+        {
+            path : "/about",
+            element: <><Navbar/><About/></>
         },
 
     ])
     return (
         <>
-       <Navbar/>
+       {/* <Navbar/> */}
        <RouterProvider router={router}/>
-       <Home/>
-       <Diabetes/>
+       {/* <Home/> */}
+       {/* <Diabetes/> */}
        </>
     );
 }

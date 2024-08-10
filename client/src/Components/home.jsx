@@ -1,9 +1,8 @@
 import React from 'react'
-
 const home = () => {
   return (
     <div>
-      This is home
+      This is You 
     </div>
   )
 }
