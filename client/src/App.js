@@ -1,22 +1,31 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from 'client/src/Components/Home.js' 
-import Diabetes from './Components/Diabetes'; // Import PredictionPage component
-import NavBar from './Components/Navbar'; // Import NavBar component
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Components/Home' 
+import Diabetes from './Components/Diabetes'; 
+import Navbar from './Components/Navbar'; 
+import './Navbar.css';
+import './App.css';
 
 function App() {
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Home/>
+        },
+        {
+            path : "/Dia",
+            element: <Diabetes/>
+        },
+
+    ])
     return (
-        <Router>
-            <div className="App">
-                <NavBar /> {/* Include the NavBar here */}
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/predict" component={Diabetes} />
-                    {/* Add more routes as needed */}
-                </Switch>
-            </div>
-        </Router>
+        <>
+       <Navbar/>
+       <RouterProvider router={router}/>
+       <Home/>
+       <Diabetes/>
+       </>
     );
 }
 
