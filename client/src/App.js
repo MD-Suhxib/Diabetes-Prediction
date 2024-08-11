@@ -12,7 +12,7 @@ import Background from './Components/Background/Background';
 function App() {
 
     let heroData = [
-        {text1:'Dive into', text2: 'what you love'},
+        {text1:'Dive into the', text2: 'future of Testing'},
         {text1:'Indulge', text2: 'your passion'},
         {text1:'Give in to ', text2: 'your passion'},
     ]

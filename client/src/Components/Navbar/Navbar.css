@@ -1,78 +1,117 @@
+/* Navbar styling */
 .navbar {
-    /* background-color: #4CAF50; Background color for the navbar */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding for the navbar */
-    text-align: center; /* Center-align text */
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Align the navbar to the top of the viewport */
-    left: 50%; /* Align the navbar horizontally to the center */
-    transform: translateX(-50%); /* Offset by half of its own width to perfectly center */
-    z-index: 1000; /* Ensure the navbar is on top of other elements */
-    width: auto; /* Allow the width to be determined by content */
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center content */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navigation styling */
 .nav {
-    display: flex; /* Use flexbox layout */
-    justify-content: center; /* Center the nav items */
-    flex-wrap: wrap; /* Allow wrapping of items on small screens */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative; /* For positioning the hamburger button */
 }
 
 .nav-list {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Display items in a row */
-    flex-wrap: wrap; /* Wrap items on small screens */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-item {
-    margin: 0 15px; /* Space between nav items */
+    margin: 0 15px;
 }
 
 .nav-link {
-    color: white; /* Text color for links */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Make text bold */
-    font-size: 1.2em; /* Font size for links */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .nav-link:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
+}
+
+/* Hamburger button styling */
+.nav-toggle {
+    display: none; /* Hide the button by default */
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001; /* Ensure it’s above other elements */
+}
+
+.nav-toggle-icon {
+    display: inline-block;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack navbar items vertically on smaller screens */
-        padding: 10px; /* Reduce padding */
-        width: 100%; /* Full width on small screens */
-        left: 0; /* Align to the left */
-        transform: none; /* No need to translate */
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block; /* Show the hamburger button on small screens */
     }
 
     .nav-list {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width for mobile menu */
+        background-color: #4CAF50; /* Background color for dropdown */
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 60px; /* Position it below the hamburger button */
+        left: 0;
+        z-index: 1000; /* Ensure it’s above other elements */
+    }
+
+    .nav-list-open {
+        display: flex; /* Show menu when open */
     }
 
     .nav-item {
-        margin: 10px 0; /* Increase space between items vertically */
+        margin: 10px 0; /* Space between items vertically */
     }
 
     .nav-link {
-        font-size: 1em; /* Reduce font size slightly for smaller screens */
+        font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 8px; /* Further reduce padding */
+        padding: 8px;
     }
 
     .nav-link {
-        font-size: 0.9em; /* Further reduce font size */
+        font-size: 0.9em;
     }
 }

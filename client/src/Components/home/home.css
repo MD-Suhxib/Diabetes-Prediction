@@ -1,9 +1,9 @@
-.hero{
+.hero {
     width: 100vw; /* Full width of the viewport */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
     display: block;
-    padding-left: 30px; /* Ensure it stacks children vertically */
+    padding-left: 30px; /* Add padding for larger screens */
 }
 
 .hero-text {
@@ -17,6 +17,18 @@
     width: auto; /* Only as wide as its content */
 }
 
+.hero-text2 {
+    color: #e7ff61;
+    font-size: 110px;
+    font-weight: 400;
+    line-height: 130px;
+    text-align: left; /* Align text to the left */
+    padding: 0;
+    margin: 0;
+    width: auto; 
+}
+
+/* Keep .hero-about styling intact */
 .hero-about {
     display: flex;
     align-items: center;
@@ -35,4 +47,35 @@
     font-size: 20px;
     font-weight: 500;
     margin: 0; /* Ensure no extra margin is applied */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-text, .hero-text2 {
+        font-size: 80px; /* Adjust font size for medium screens */
+        line-height: 100px; /* Adjust line-height */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .hero-text, .hero-text2 {
+        font-size: 60px; /* Further reduce font size */
+        line-height: 80px; /* Further adjust line-height */
+        text-align: center; /* Center-align text on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-left: 10px; /* Further reduce padding */
+    }
+
+    .hero-text, .hero-text2 {
+        font-size: 40px; /* Further reduce font size */
+        line-height: 50px; /* Further adjust line-height */
+    }
 }
