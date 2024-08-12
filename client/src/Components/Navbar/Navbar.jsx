@@ -18,8 +18,10 @@ const Navbar = () => {
                 <ul className={`nav-list ${isNavOpen ? 'nav-list-open' : ''}`}>
                     <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
                     <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
-                    <li className="nav-item"><Link to="/Dia" className="nav-link">Predict</Link></li>
-                    <li className="nav-item"><a href="#features" className="nav-link">Features</a></li>
+                    <Link to="/Dia" className="nav-link"></Link>
+
+
+                    <li className="nav-item"><Link to="/features" className="nav-link">Features</Link></li>
                     <li className="nav-item"><a href="#contact" className="nav-link">Contact</a></li>
                 </ul>
             </nav>

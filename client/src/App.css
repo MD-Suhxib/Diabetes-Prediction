@@ -14,23 +14,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px; /* Added padding for small devices */
 }
 
 /* App Container */
 .App {
   background-color: #fff;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px; /* Further reduced padding */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow */
   width: 100%;
-  max-width: 600px;
+  max-width: 360px; /* Reduced max-width */
   text-align: center;
 }
 
 /* Form Heading */
 h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 1.4em; /* Reduced font size */
+  margin-bottom: 10px; /* Reduced margin-bottom */
   color: #4CAF50;
 }
 
@@ -38,35 +39,39 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px; /* Reduced gap between elements */
+  align-items: center; /* Center align items */
 }
 
 /* Form Labels */
 label {
-  font-size: 1em;
+  font-size: 0.85em; /* Reduced font size */
   color: #555;
   text-align: left;
+  width: 100%; /* Ensure labels take full width */
   margin-bottom: 5px;
 }
 
 /* Form Inputs */
 input {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px; /* Reduced padding */
+  border-radius: 4px; /* Smaller border radius */
   border: 1px solid #ccc;
-  font-size: 1em;
+  font-size: 0.85em; /* Reduced font size */
+  width: 100%; /* Full width for inputs */
 }
 
 /* Submit Button */
 button[type="submit"] {
   background-color: #4CAF50;
   color: #fff;
-  padding: 10px;
+  padding: 8px 16px; /* Reduced padding */
   border: none;
-  border-radius: 5px;
+  border-radius: 4px; /* Smaller border radius */
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.85em; /* Reduced font size */
   transition: background-color 0.3s ease;
+  width: 100%; /* Full width for button */
 }
 
 button[type="submit"]:hover {
@@ -75,16 +80,49 @@ button[type="submit"]:hover {
 
 /* Prediction Result Styling */
 .result {
-  margin-top: 20px;
-  font-size: 1.5em;
+  margin-top: 15px; /* Reduced margin-top */
+  font-size: 1.2em; /* Reduced font size */
   font-weight: bold;
   color: #333;
 }
 
+/* Result Success */
 .result.success {
   color: #4CAF50;
 }
 
+/* Result Fail */
 .result.fail {
   color: #f44336;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px 15px; /* Further reduced padding for tablets and small screens */
+    max-width: 320px; /* Further reduced max-width */
+  }
+
+  h1 {
+    font-size: 1.2em; /* Adjust heading size for tablets */
+  }
+
+  input,
+  button[type="submit"] {
+    font-size: 0.8em; /* Reduced font size for inputs and buttons */
+  }
+
+  .result {
+    font-size: 1.1em; /* Reduced font size for results */
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 8px; /* Further reduced padding for very small screens */
+    max-width: 100%; /* Full width on very small screens */
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }}

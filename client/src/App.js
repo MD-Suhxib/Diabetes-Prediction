@@ -8,6 +8,7 @@ import About from './Components/About';
 import './Components/Navbar/Navbar.css';
 import './App.css';
 import Background from './Components/Background/Background';
+import PredictionPage from './Components/predict-but';
 
 function App() {
 
@@ -31,6 +32,10 @@ function App() {
             setHeroCount={setHeroCount}
             playStatus={playStatus}
             /></>
+        },
+        {
+            path : "/features",
+            element: <><Navbar/><PredictionPage/></>
         },
         {
             path : "/Dia",

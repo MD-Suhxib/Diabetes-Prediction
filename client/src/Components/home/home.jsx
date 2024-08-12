@@ -12,8 +12,11 @@ const home = ({heroData,setHeroCount,heroCount,setPlayStatus,playStatus}) => {
         
       </div>
       <div className="hero-about" >
-        <p>Explore the App</p>
+        <p>Download Sample Data</p>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
         <img src={arrow_btn} alt="" />
+        </a>
+        
       </div>
       <div className="hero-play">
         <ul className="hero-dots">

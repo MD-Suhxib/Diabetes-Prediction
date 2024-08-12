@@ -1,51 +1,70 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* About Container Styling */
 .about-container {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100vh; /* Full viewport height */
-    padding: 0 20px;
-    text-align: center; /* Center-align text */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Add padding for small screens */
+  overflow: hidden; /* Hide overflow for smooth effects */
 }
 
 /* Heading styling */
 .about-container h2 {
-    margin: 0 0 20px 0; 
-    color: #e7ff61; 
-    font-size: 3vw; 
-    font-weight: bold; 
+  margin: 0 0 20px 0; /* Adjust margin for better spacing */
+  color: #e7ff61; /* Text color */
+  font-size: 4vw; /* Responsive font size */
+  font-weight: bold; 
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 15px 25px; /* Padding for spacing inside the heading */
+  border-radius: 10px; /* Rounded corners for the background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  text-align: center; /* Center text inside heading */
 }
 
 /* Paragraph styling */
 .about-container p {
-    color: #e7ff61; /* Text color for paragraphs */
-    line-height: 1.8; /* Increase line height for better readability */
-    font-size: 1.5vw; /* Responsive font size */
-    margin: 0; /* Remove default margin */
-    font-weight: bold; /* Make the text bold */
-    padding: 0 10%; /* Add padding for better text alignment */
-    text-align: justify; /* Justify the text for a neat look */
+  color: #e7ff61; /* Text color */
+  line-height: 1.8; /* Increase line height for better readability */
+  font-size: 1.8vw; /* Responsive font size */
+  margin: 0; 
+  font-weight: bold; /* Make the text bold */
+  padding: 15px 25px; /* Padding for better text alignment */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 10px; /* Rounded corners for the background */
+  text-align: justify; /* Justify the text for a neat look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  max-width: 800px; /* Limit width to maintain readability */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .about-container h2 {
-        font-size: 6vw; /* Adjust font size for smaller screens */
-    }
+  .about-container h2 {
+    font-size: 6vw; /* Adjust font size for tablets and smaller screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
 
-    .about-container p {
-        font-size: 4vw; /* Adjust font size for smaller screens */
-        padding: 0 5%; /* Adjust padding on smaller screens */
-    }
+  .about-container p {
+    font-size: 4vw; /* Adjust font size for tablets */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .about-container h2 {
-        font-size: 8vw; /* Adjust font size for very small screens */
-    }
+  .about-container h2 {
+    font-size: 8vw; /* Adjust font size for very small screens */
+    padding: 10px 15px; /* Adjust padding for very small screens */
+  }
 
-    .about-container p {
-        font-size: 5vw; /* Adjust font size for very small screens */
-        padding: 0 5%; /* Maintain padding for very small screens */
-    }
+  .about-container p {
+    font-size: 5vw; /* Adjust font size for very small screens */
+    padding: 8px 15px; /* Adjust padding for very small screens */
+  }
 }
